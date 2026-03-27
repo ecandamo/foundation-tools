@@ -1,0 +1,45 @@
+# Cursor Rules — Foundation Tools
+
+## Purpose
+Scripts, scraping, automation, data work, API integrations, and anything non-app.
+
+## Stack
+- Python 3 — scraping, data, automation, analysis
+- Node.js / TypeScript — API integrations, Claude API, JSON work
+- Bash — file management, simple automation
+
+## Code Rules
+- Keep scripts small and single-purpose
+- Add comments explaining what each script does
+- Save all outputs to outputs/ folder
+- Use virtual environments for Python (venv)
+- Use clear readable code over clever code
+- No unnecessary dependencies
+- Add type hints to all Python functions
+
+## Folder Structure
+- scripts/ — individual scripts
+- outputs/ — all generated files, CSVs, JSONs
+- inputs/ — source files, raw data
+- utils/ — shared helper functions
+
+## Python Rules
+- Always use type hints
+- Always handle errors with try/except
+- Use pathlib for file paths, not os.path
+- Virtual environment lives in venv/ — never commit it
+
+## Cowork Handoff
+- When producing files for Cowork, copy to ~/Shared/Outputs/
+- Log filename and purpose in ~/Shared/HANDOFF.md
+
+## Self-Improvement
+- Review .learnings/ at session start
+- Log corrections to .learnings/LEARNINGS.md
+- Log errors to .learnings/ERRORS.md
+
+## Cursor-Specific Behavior
+- Use Composer for any change touching more than one file
+- After completing a task, always suggest the next logical step
+- Always show the full file path when referencing a file
+- If a change affects multiple scripts, update utils/ accordingly
