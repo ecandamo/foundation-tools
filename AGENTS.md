@@ -14,16 +14,19 @@ Scripts, scraping, data automation, API integrations, and utilities. No web fram
 - Save all outputs to outputs/
 - Comment code clearly
 - No unnecessary dependencies
+- Add type hints to all Python functions
+
+## Python Rules
+- Always use type hints
+- Always handle errors with try/except
+- Use pathlib for file paths, not os.path
+- Virtual environment lives in venv/ — never commit it
 
 ## Folder Structure
 - scripts/ — individual scripts
 - outputs/ — generated files
 - inputs/ — source data
 - utils/ — shared helpers
-
-## Cowork Handoff
-- Copy output files to ~/Shared/Outputs/ when intended for Cowork
-- Log in ~/Shared/HANDOFF.md
 
 ## Self-Improvement
 - Review .learnings/ at session start

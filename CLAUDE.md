@@ -15,6 +15,13 @@ Lightweight starter for scripts, scraping, automation, data work, API integratio
 - Use virtual environments for Python (venv)
 - Use clear readable code over clever code
 - No unnecessary dependencies
+- Add type hints to all Python functions
+
+## Python Rules
+- Always use type hints
+- Always handle errors with try/except
+- Use pathlib for file paths, not os.path
+- Virtual environment lives in venv/ — never commit it
 
 ## Folder Structure
 - scripts/ — individual scripts
@@ -22,6 +29,7 @@ Lightweight starter for scripts, scraping, automation, data work, API integratio
 - inputs/ — source files, raw data
 - utils/ — shared helper functions
 
-## Cowork Handoff
-- When producing files for Cowork, copy to ~/Shared/Outputs/
-- Log filename and purpose in ~/Shared/HANDOFF.md
+## Self-Improvement
+- Review .learnings/ at session start
+- Log corrections to .learnings/LEARNINGS.md
+- Log errors to .learnings/ERRORS.md
