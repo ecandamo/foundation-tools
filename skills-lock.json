@@ -5,6 +5,36 @@
       "source": "currents-dev/playwright-best-practices-skill",
       "sourceType": "github",
       "computedHash": "320eaf861e3a0a923bfaad0726cb311a3fe30093378f8d26c89b9c5ae5c42b35"
+    },
+    "python-anti-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "5a6d1c378bbfc859a12fe08dda1e2b856af725ff3cc46ee38cea8bd03736abdb"
+    },
+    "python-code-style": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "35ed0c437f33462187b0a89da8e5bfe9ac259dbc8731257c5445f1a5e1229acf"
+    },
+    "python-error-handling": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "05d1fd2762d38e6afac8533e28554038e27fc8620b2df63f1e806de3c4d77fe3"
+    },
+    "python-project-structure": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "2f4f560964af8ecad4d54666c044baa54671d0abd1136c848b539befe24db170"
+    },
+    "python-testing-patterns": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "69915bb276b6aec61fe5b283a933f96584f66d14b616ce2060d95757629c6866"
+    },
+    "python-type-safety": {
+      "source": "wshobson/agents",
+      "sourceType": "github",
+      "computedHash": "f011d9018935ae01209f30c0a0f9d2f15f3058867baeb7a8c820bc54c8394645"
     }
   }
 }
