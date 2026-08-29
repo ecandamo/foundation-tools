@@ -1,20 +1,22 @@
-# Foundation Tools — Agent Rules
+# Foundation Tools
 
 ## Purpose
-Scripts, scraping, data automation, API integrations, and utilities. No web framework.
+Lightweight starter for scripts, scraping, automation, data work, and anything non-app-development.
 
 ## Stack
-- Python 3 — scraping, data, automation, analysis
-- Node.js / TypeScript — API integrations, Claude API, JSON work
+- Python 3 — scraping, data processing, automation, analysis (Excel/spreadsheets included)
 - Bash — file management, simple automation
 
-## Rules
+## Code Rules
+- Copy scripts/example_script.py as the starting point for a new script — it shows the conventions below in working code
 - Keep scripts small and single-purpose
-- Use venv for Python dependencies
-- Save all outputs to outputs/
-- Comment code clearly
+- Add comments explaining what each script does
+- Take inputs via argparse (CLI flags) rather than hardcoding values at the top of the file — see example_script.py
+- Save all outputs to outputs/ folder — prefix filenames with the script name (or use a subfolder per script) to avoid collisions between scripts
+- Use virtual environments for Python (venv)
+- Use clear readable code over clever code
 - No unnecessary dependencies
-- Add type hints to all Python functions
+- Tests aren't expected by default for one-off scripts — add them only for reusable logic in utils/
 
 ## Python Rules
 - Always use type hints
@@ -23,12 +25,45 @@ Scripts, scraping, data automation, API integrations, and utilities. No web fram
 - Virtual environment lives in venv/ — never commit it
 
 ## Folder Structure
-- scripts/ — individual scripts
-- outputs/ — generated files
-- inputs/ — source data
-- utils/ — shared helpers
+- scripts/ — individual scripts (see example_script.py for the reference pattern)
+- notebooks/ — Jupyter notebooks for exploratory analysis (clear all outputs before committing — see README)
+- outputs/ — all generated files, CSVs, JSONs
+- inputs/ — source files, raw data
+- utils/ — shared helper functions
 
 ## Self-Improvement
-- Review .learnings/ at session start
-- Log corrections to .learnings/LEARNINGS.md
-- Log errors to .learnings/ERRORS.md
+- At the start of each session, review .learnings/ files for relevant context
+- After solving non-obvious issues or when I correct you, log the learning to .learnings/LEARNINGS.md
+- Log errors and failed commands to .learnings/ERRORS.md
+- Log feature requests or missing capabilities to .learnings/FEATURE_REQUESTS.md
+- Before major tasks, review recent learnings to avoid repeating past mistakes
+- Periodically consolidate learnings — merge duplicates, remove outdated entries, promote broadly applicable ones to AGENTS.md
+
+<!-- BEGIN:handoff-workflow -->
+## Handoff Workflow
+- Always read `HANDOFF.md` before starting meaningful work in this repository
+- Use `HANDOFF.md` to understand:
+  - project summary
+  - current status
+  - last session changes
+  - files touched
+  - open issues
+  - next best step
+  - guardrails and known decisions
+- Before ending a meaningful work session, update `HANDOFF.md`
+- Keep `HANDOFF.md` short, current, and practical
+- Update these sections when relevant:
+  - Current Status
+  - Last Session Changes
+  - Files Touched
+  - Open Issues
+  - Next Best Step
+  - Known Decisions
+- Do not turn `HANDOFF.md` into a long diary or changelog
+- Do not duplicate the README
+- Prefer concise bullet points over long paragraphs
+- When in doubt:
+  - preserve working logic
+  - avoid unnecessary rewrites
+  - follow the Next Best Step unless a blocker requires otherwise
+<!-- END:handoff-workflow -->

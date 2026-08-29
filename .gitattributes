@@ -1,0 +1,4 @@
+# Treat Excel workbooks as binary so git never tries to diff/merge them as text
+*.xlsx binary
+*.xls binary
+*.xlsm binary

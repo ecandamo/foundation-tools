@@ -1,0 +1,11 @@
+# Formatting and linting
+black
+ruff
+
+# Notebooks (uncomment if this project does analysis work in Jupyter)
+# jupyter
+# ipykernel
+# nbstripout        # strips notebook output/metadata on commit — see README
+
+# Add project-specific dependencies below as scripts need them
+# (requests, pandas, beautifulsoup4, openpyxl, etc.)
