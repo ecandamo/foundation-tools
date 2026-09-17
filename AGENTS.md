@@ -1,5 +1,10 @@
 # Foundation Tools
 
+> **This file is the single source of truth for every agent.** Claude Code loads
+> it as `CLAUDE.md` (a symlink to this file); Codex and other agents load it as
+> `AGENTS.md`. Same content either way — make edits here, in `AGENTS.md`.
+> If a checkout drops the symlink, recreate it: `ln -sf AGENTS.md CLAUDE.md`.
+
 ## Purpose
 Lightweight starter for scripts, scraping, automation, data work, and anything non-app-development.
 
@@ -15,7 +20,7 @@ Lightweight starter for scripts, scraping, automation, data work, and anything n
 - Save all outputs to outputs/ folder — prefix filenames with the script name (or use a subfolder per script) to avoid collisions between scripts
 - Use virtual environments for Python (venv)
 - Use clear readable code over clever code
-- No unnecessary dependencies
+- No unnecessary dependencies — check utils/ before writing a new helper
 - Tests aren't expected by default for one-off scripts — add them only for reusable logic in utils/
 
 ## Python Rules

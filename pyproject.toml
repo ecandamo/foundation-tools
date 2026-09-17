@@ -9,14 +9,13 @@ extend-exclude = '''
   | inputs
   | \.agents
   | \.claude
-  | \.cursor
 )/
 '''
 
 [tool.ruff]
 line-length = 88
 target-version = "py312"
-extend-exclude = ["venv", ".venv", "outputs", "inputs", ".agents", ".claude", ".cursor"]
+extend-exclude = ["venv", ".venv", "outputs", "inputs", ".agents", ".claude"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]

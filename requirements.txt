@@ -1,4 +1,4 @@
-# Formatting and linting
+# Formatting and linting (unpinned — always installs the latest)
 black
 ruff
 

@@ -14,6 +14,16 @@ anything that isn't app development (that's `foundation-webapp`).
 4. Copy `scripts/example_script.py` as the starting point for your first script
 5. Start building
 
+## Works with any agent
+This template is agent-agnostic. The project rules live once in `AGENTS.md`, the
+single source of truth. Each agent just reads it under the name it expects:
+- **Claude Code** → `CLAUDE.md` (a symlink to `AGENTS.md`)
+- **Codex / other agents** → `AGENTS.md` directly
+
+Skills follow the same idea: the real files live in `.agents/skills/`, and
+`.claude/skills/` symlinks to them so Claude Code's native Skill tool picks them
+up. Edit rules in `AGENTS.md` only — never maintain parallel copies.
+
 ## Folder Structure
 - `scripts/` — individual scripts, one job each. `example_script.py` is the reference pattern — copy it for a new script.
 - `notebooks/` — Jupyter notebooks for exploratory analysis (see Notebooks below)
@@ -24,7 +34,7 @@ anything that isn't app development (that's `foundation-webapp`).
 ## Formatting & Linting
 - `make format` (or `black .`) — format Python files
 - `make lint` (or `black --check . && ruff check .`) — lint Python files
-- Config lives in `pyproject.toml` (line length, excludes for `venv/`, `outputs/`, `inputs/`)
+- Config lives in `pyproject.toml` (line length, target version, and excluded folders)
 - CI runs both checks automatically on every push (see `.github/workflows/ci.yml`)
 
 ## Notebooks
@@ -36,12 +46,7 @@ unreadable and can leak data into git history. Either use `Cell > All Output >
 Clear` in Jupyter, or run `make clean-notebooks` (requires `nbstripout`).
 
 ## Rules
-- Copy `scripts/example_script.py` as the starting point for a new script
-- Keep scripts small and single-purpose
-- Add comments explaining what each script does
-- Take inputs via `argparse` (CLI flags) rather than hardcoding values at the top of the file
-- Save all outputs to `outputs/` — prefix filenames with the script name (or use a subfolder per script) to avoid collisions
-- Use a virtual environment for Python (`venv/`, never committed)
-- Add type hints to all Python functions
-- No unnecessary dependencies
-- Tests aren't expected by default for one-off scripts — add them only for reusable logic in `utils/`
+All coding rules — scripts, Python conventions, outputs, dependencies — plus the
+self-improvement and handoff workflows live in `AGENTS.md`, the single source of
+truth. Read it before writing code. This README intentionally doesn't restate
+them, so the two can't drift.
